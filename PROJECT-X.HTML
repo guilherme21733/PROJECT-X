@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT X - Plataforma de Estudos Inteligentes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .name-option:hover {
+            background-color: rgba(99, 102, 241, 0.1);
+            transform: scale(1.03);
+        }
+        
+        .screenshot-placeholder {
+            background: linear-gradient(45deg, #f3f4f6 25%, #e5e7eb 25%, #e5e7eb 50%, #f3f4f6 50%, #f3f4f6 75%, #e5e7eb 75%, #e5e7eb 100%);
+            background-size: 20px 20px;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-indigo-800">PROJECT X</h1>
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full font-medium transition duration-300">
+                Entrar / Criar Conta
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg relative overflow-hidden">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Estude com inteligência. <span class="text-indigo-600">Conquiste sua aprovação.</span></h1>
+                <p class="text-xl text-gray-600 mb-8">Transformamos vídeos do YouTube em questões, flashcards e resumos para otimizar seu tempo de estudo.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-medium transition duration-300 shadow-lg hover:shadow-xl">
+                        Comece agora - É grátis
+                    </button>
+                    <button class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-medium transition duration-300">
+                        <i class="fas fa-play-circle mr-2"></i> Ver demonstração
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-16 max-w-4xl mx-auto relative">
+                <div class="relative floating">
+                    <div class="screenshot-placeholder rounded-2xl h-80 w-full mx-auto shadow-xl overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-video text-gray-400 text-5xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- What is PROJECT X -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">TECNOLOGIA EDUCACIONAL</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O que é o PROJECT X?</h2>
+                <p class="text-lg text-gray-600">
+                    Uma plataforma revolucionária que transforma vídeos educacionais do YouTube em questões práticas, flashcards e resumos. 
+                    Além disso, oferecemos um banco com centenas de questões reais dos principais vestibulares e um temporizador que mostra 
+                    exatamente quanto tempo falta para suas provas selecionadas.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
+                <div class="order-2 md:order-1">
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-link text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Cole o link do vídeo</h3>
+                                <p class="text-gray-600">Basta copiar e colar o link de qualquer vídeo do YouTube para começar o processo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-cogs text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Processamento inteligente</h3>
+                                <p class="text-gray-600">Nossa IA analisa o conteúdo e identifica os pontos mais importantes para seu estudo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-indigo-100 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-file-alt text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Receba seu material</h3>
+                                <p class="text-gray-600">Questões, flashcards e resumos prontos para você estudar de forma eficiente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <div class="screenshot-placeholder rounded-2xl h-96 w-full shadow-lg relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-magic text-gray-400 text-5xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">FUNCIONALIDADES</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tudo que você precisa para estudar</h2>
+                <p class="text-lg text-gray-600">
+                    Recursos desenvolvidos para maximizar seu aprendizado e otimizar seu tempo
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-question-circle text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Gerador de Questões</h3>
+                    <p class="text-gray-600 mb-4">
+                        Transforme vídeos em questões personalizadas para testar seu conhecimento imediatamente.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Questões objetivas e discursivas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Diferentes níveis de dificuldade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Respostas comentadas</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Banco de Questões</h3>
+                    <p class="text-gray-600 mb-4">
+                        Centenas de questões reais dos principais vestibulares como ENEM, Fuvest e UnB.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Organizadas por disciplina</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Filtros por assunto e dificuldade</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Estatísticas de desempenho</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Temporizador Inteligente</h3>
+                    <p class="text-gray-600 mb-4">
+                        Saiba exatamente quanto tempo falta para cada prova e organize seus estudos.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Contagem regressiva personalizada</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Metas diárias de estudo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Lembretes e notificações</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Acompanhamento</h3>
+                    <p class="text-gray-600 mb-4">
+                        Sistema de login com histórico de progresso e desempenho nas questões.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Gráficos de evolução</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Identificação de pontos fracos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Relatórios semanais</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-layer-group text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Flashcards</h3>
+                    <p class="text-gray-600 mb-4">
+                        Sistema de revisão espaçada para memorização eficiente de conceitos.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Gerados automaticamente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Revisão baseada em algoritmo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Personalizáveis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:border-indigo-500 border-2 border-transparent">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Resumos Automáticos</h3>
+                    <p class="text-gray-600 mb-4">
+                        Extraia os pontos principais de qualquer conteúdo em formato de resumo.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Organizados por tópicos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Exportáveis em PDF</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                            <span>Marcadores de importância</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">PASSO A PASSO</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Como funciona na prática</h2>
+                <p class="text-lg text-gray-600">
+                    Veja como a plataforma pode transformar sua forma de estudar
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+                <div class="text-center">
+                    <div class="relative mx-auto w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="absolute -top-2 -right-2 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</span>
+                        <i class="fas fa-link text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Cole o link</h3>
+                    <p class="text-gray-600">
+                        Copie e cole o link do vídeo do YouTube que deseja transformar em material de estudo.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="relative mx-auto w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="absolute -top-2 -right-2 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</span>
+                        <i class="fas fa-cogs text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Processamento</h3>
+                    <p class="text-gray-600">
+                        Nossa IA analisa o conteúdo e identifica os pontos mais importantes para seu estudo.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="relative mx-auto w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <span class="absolute -top-2 -right-2 bg-indigo-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</span>
+                        <i class="fas fa-file-download text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Receba seu material</h3>
+                    <p class="text-gray-600">
+                        Questões, flashcards e resumos prontos para você estudar de forma eficiente.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="screenshot-placeholder rounded-xl h-64 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-desktop text-gray-400 text-4xl"></i>
+                </div>
+                <div class="screenshot-placeholder rounded-xl h-64 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-list-ol text-gray-400 text-4xl"></i>
+                </div>
+                <div class="screenshot-placeholder rounded-xl h-64 flex items-center justify-center shadow-lg">
+                    <i class="fas fa-stopwatch text-gray-400 text-4xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">DEPOIMENTOS</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O que os estudantes dizem</h2>
+                <p class="text-lg text-gray-600">
+                    Veja como o PROJECT X está ajudando alunos a alcançarem seus objetivos
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Carolina</h4>
+                            <p class="text-sm text-gray-500">Estudante de Medicina</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "O PROJECT X revolucionou minha forma de estudar. Consigo transformar longas videoaulas em questões práticas em minutos. Minha produtividade aumentou pelo menos 3x!"
+                    </p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Lucas Mendes</h4>
+                            <p class="text-sm text-gray-500">Vestibulando ENEM</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Como alguém que trabalha e estuda, o tempo é precioso. O PROJECT X me permite estudar de forma eficiente, transformando meus momentos de estudo em resultados concretos."
+                    </p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">PLANOS</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Planos e Preços</h2>
+                <p class="text-lg text-gray-600">
+                    Estamos preparando opções acessíveis para todos os tipos de estudantes
+                </p>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-xl p-8 max-w-3xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Planos em construção</h3>
+                    <p class="text-gray-600 max-w-lg mx-auto">
+                        Estamos trabalhando nas melhores opções para você. Enquanto isso, aproveite nossa versão gratuita com todas as funcionalidades básicas!
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-2 border-indigo-100">
+                        <h4 class="font-bold text-gray-800 text-xl mb-2">Versão Gratuita</h4>
+                        <p class="text-3xl font-bold text-indigo-600 mb-4">R$ 0<span class="text-lg text-gray-500">/sempre</span></p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>5 vídeos por mês</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>Banco de questões básico</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>Acompanhamento simples</span>
+                            </li>
+                        </ul>
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full font-medium w-full transition duration-300">
+                            Começar agora
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-2 border-indigo-100">
+                        <div class="flex justify-center mb-2">
+                            <span class="bg-indigo-100 text-indigo-600 px-2 py-1 rounded-full text-xs font-medium">EM BREVE</span>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-xl mb-2">Versão Premium</h4>
+                        <p class="text-3xl font-bold text-gray-800 mb-4">A definir</p>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>Vídeos ilimitados</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>Banco de questões completo</span>
+                            </li>
+                            <li class="flex items-center justify-center">
+                                <i class="fas fa-check-circle text-indigo-500 mr-2"></i>
+                                <span>Acompanhamento avançado</span>
+                            </li>
+                        </ul>
+                        <button class="bg-gray-200 text-gray-500 px-6 py-2 rounded-full font-medium w-full cursor-not-allowed">
+                            Em breve
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600">Dúvidas sobre nossos planos? <a href="#" class="text-indigo-600 hover:underline">Fale conosco</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon -->
+    <section class="py-16 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm font-medium mb-4">NOVIDADES</span>
+                <h2 class="text-3xl font-bold mb-4">Em breve no PROJECT X</h2>
+                <p class="text-lg text-indigo-100">
+                    Novas funcionalidades que estamos desenvolvendo para você
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Aplicativo Mobile</h3>
+                    <p class="text-indigo-100">
+                        Estude em qualquer lugar com nosso app para Android e iOS.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-clipboard-check text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Modo Simulado</h3>
+                    <p class="text-indigo-100">
+                        Provas completas com correção automática e estatísticas.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-money-bill-wave text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pagamento via Pix</h3>
+                    <p class="text-indigo-100">
+                        Facilidade e rapidez na hora de assinar nossos planos.
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-pie text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Dashboard</h3>
+                    <p class="text-indigo-100">
+                        Acompanhe seu desempenho com gráficos e relatórios detalhados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Name Evaluation -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full text-sm font-medium mb-4">AJUDE-NOS</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nome em avaliação</h2>
+                <p class="text-lg text-gray-600">
+                    Estamos considerando estas sugestões para o nome definitivo da plataforma
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    NeuroPrep
+                </div>
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    Qstn.ai
+                </div>
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    Estudaí
+                </div>
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    FlashVest
+                </div>
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    Exercita
+                </div>
+                <div class="name-option border-2 border-gray-200 p-4 rounded-lg text-center font-medium transition duration-300 cursor-pointer hover:border-indigo-300">
+                    Inteligente.app
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 mb-4">Qual você prefere? Nos ajude a escolher!</p>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md">
+                    Votar no melhor nome
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Pronto para transformar sua forma de estudar?</h2>
+                <p class="text-xl text-gray-600 mb-8">Comece agora gratuitamente e tenha acesso a todas as funcionalidades básicas.</p>
+                <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-medium transition duration-300 text-lg shadow-lg hover:shadow-xl">
+                    Criar minha conta gratuita
+                </button>
+                <p class="text-gray-500 mt-4 text-sm">Sem compromisso. Cancele quando quiser.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">PROJECT X</h2>
+                    </div>
+                    <p class="text-gray-400 mb-4">Criado com inteligência. Feito pra quem quer passar.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Produto</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Funcionalidades</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Planos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Demonstração</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Novidades</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Empresa</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sobre nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Carreiras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Parcerias</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Suporte</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Central de Ajuda</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tutoriais</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contato</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 PROJECT X. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Termos de Uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for feature cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Name selection interaction
+            const nameOptions = document.querySelectorAll('.name-option');
+            nameOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    nameOptions.forEach(opt => opt.classList.remove('border-indigo-600', 'bg-indigo-50'));
+                    this.classList.add('border-indigo-600', 'bg-indigo-50');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
